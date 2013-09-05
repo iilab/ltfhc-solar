@@ -1,0 +1,4 @@
+solar_load		iLoad:GAUGE:0:U, vLoad:GAUGE:0:U, AhLoad:COUNTER:0:U
+solar_array		iArray:GAUGE:0:U, vArray:GAUGE:0:U
+solar_charge		iCharge:GAUGE:0:U, vBatt:GAUGE:0:U, AhCharge:COUNTER:0:U kWhCharge:COUNTER:0:U WCharge:COUNTER:0:U
+solar_temp		ambientC:GAUGE:0:U
