@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import minimalmodbus
 import os
 
