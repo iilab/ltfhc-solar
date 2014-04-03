@@ -1,11 +1,13 @@
+#!/usr/bin/python
+
 import minimalmodbus
 import os
 import time
+import sys
 
 from serial import SerialException
 
 while True:
-        time.sleep(0.5)
         try:   
                 sunsaver = minimalmodbus.Instrument( '/dev/ttyS1', 1 )
 
@@ -26,6 +28,7 @@ while True:
                 powerOut=data[31]*989.5/65536.0
 
                 print "%s battVoltage: %1.2fV / arrayVoltage: %1.2fV / loadVoltage: %1.2fV / chargeCurrent: %1.2fA / loadCurrent: %1.2fA / powerOut: %1.2fW / ambientTemp: %1.2fC" % (time.strftime('%x %X'), battVoltage, arrayVoltage, loadVoltage, chargeCurrent, loadCurrent, powerOut, ambientTemp)
+                sys.stdout.flush()
 
-        except SerialException:
+        except:
                 pass
